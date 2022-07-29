@@ -1,0 +1,24 @@
+In order to run the code, the python packages numpy, pandas and scikit-learn need to be
+installed.
+
+To display the score of the best performing tree run the part2_house_value_regression file.
+The best performing hypervalues are saved as the default parameters for the Regressor,
+which are:
+ -> nb_epoch=1000
+ -> learning_rate=0.01
+ -> batch_size=512
+ -> activation='tanh'
+ -> layer_numbers=10
+ -> layer_size=10
+ -> normaliser=Normaliser.MIN_MAX_NORMALISATION
+
+To compute and display the best performing values uncomment the lines with:
+ -> RegressorHyperParameterSearch(regressor, x_train, y_train)
+ -> return
+in the example_main function and run the file again.
+Note: the time for finding the best values is long and this is the reason it is commented
+out.
+
+To modify the input dataset you have to add a new csv file containing the data. Then you
+have to modify pd.read_csv("housing.csv") from the example_main function to read from the
+new dataset.
